@@ -1,0 +1,76 @@
+.tweet {
+    font-family: "Helvetica Neue", sans-serif;
+    padding: 9px 12px;
+    display: flex;
+
+    &__avatar {
+        width: 48px;
+        height: 48px;
+        background: #f3f3f3;
+        border-radius: 5px;
+    }
+
+    &__content {
+        width: 509px;
+        margin-left: 10px;
+    }
+
+    &__author {
+        display: flex;
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgb(41, 47, 51);
+    }
+
+    &__login {
+        font-size: 13px;
+        line-height: 18px;
+        color: rgb(136, 153, 166);
+        margin-left: 4px;
+    }
+
+    &__text {
+        color: rgb(41, 47, 51);
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    &__controls {
+        margin-top: 10px;
+        display: flex;
+    }
+
+    &__control {
+        font-size: 12px;
+        line-height: 14px;
+        color: #AAB8C1;
+        font-weight: 500;
+        cursor: pointer;
+
+        &_type {
+            &_reply {
+                &:before {
+                    content: 'reply';
+                }
+            }
+            &_retweet {
+                &:before {
+                    content: 'retweet';
+                }
+            }
+            &_like {
+                &:before {
+                    content: 'like';
+                }
+            }
+        }
+
+        & + & {
+            margin-left: 60px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "the-cage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "foreman": "1.4.1",
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-base64": "^0.1.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-minify": "^0.0.5",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-plumber": "^1.1.0",
+    "marked": "^0.3.5",
+    "request": "^2.69.0",
+    "through2": "^2.0.0"
+  },
+  "scripts": {
+    "start": "nf start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:releu/beast-start.git"
+  },
+  "author": "releu@me.com",
+  "license": "ISC"
+}

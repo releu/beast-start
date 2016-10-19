@@ -1,0 +1,75 @@
+.profile {
+    font-family: "Helvetica Neue", sans-serif;
+    border: 1px solid #e1e8ed;
+    background: #FFF;
+    border-radius: 6px;
+    overflow: hidden;
+
+    &__cover {
+        height: 96px;
+        background: #fc0;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__author {
+        margin-top: 10px;
+        padding: 0 11px;
+    }
+
+    &__name {
+        color: rgb(41, 47, 51);
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: bold;
+    }
+
+    &__login {
+        font-size: 12px;
+        color: rgb(102, 117, 127);
+        line-height: 16px;
+        cursor: pointer;
+
+        &:hover{
+            color: rgb(255, 0, 0);
+        }
+    }
+
+    &__stats {
+        margin-top: 10px;
+        padding: 0 11px 10px;
+        display: flex;
+        justify-content: space-between;
+
+        &item {
+            min-width: 80px;
+        }
+    }
+
+    &__caption {
+        text-transform: uppercase;
+        font-size: 10px;
+        color: #8899a6;
+    }
+
+    &__value {
+        margin-top: 3px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #0084B4;
+    }
+
+    &_verified_yes {
+        .profile__name {
+            &:after {
+                content: '';
+                background: url('../blocks/profile/i/icon.svg') no-repeat top left;
+                width: 18px;
+                height: 18px;
+                position: relative;
+                left: 4px;
+                display: inline-block;
+            }
+        }
+    }
+}

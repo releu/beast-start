@@ -1,0 +1,50 @@
+.ad {
+    border-bottom: 1px solid #E1E8ED;
+    position: relative;
+
+    &__banner {
+        padding: 12px;
+        height: 68px;
+        position: relative;
+        display: none;
+
+        &_state_visible {
+            display: block;
+        }
+    }
+
+    &__thumb {
+        position: absolute;
+        height: 60px;
+        left: 12px;
+        top: 12px;
+    }
+
+    &__text {
+        padding-left: 96px;
+        padding-right: 40px;
+        font-size: 24px;
+        line-height: 26px;
+        padding-top: 4px;
+        color: #0044BB;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 24px;
+        font-weight: 300;
+        color: #999;
+
+        &:hover {
+            color: #333;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,193 @@
+.school {
+    min-width: 860px;
+    position: relative;
+    font-family: "Helvetica Neue", sans-serif;
+
+    &__header {
+        background: #F3F1ED;
+    }
+
+    &__container {
+        width: 620px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @keyframes school__tableofcontents_appear {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    &__tableofcontents {
+        background: #4D4A43;
+        padding: 24px 0 36px;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+
+        &_state_inactive {
+            display: none;
+        }
+
+        &_state_active {
+            display: block;
+            animation: school__tableofcontents_appear ease-out 0.1s;
+        }
+
+        &item {
+            width: 460px;
+            margin: 0 auto;
+            color: white;
+            font-size: 16px;
+            display: block;
+            padding: 2px 20px 0;
+            line-height: 43px;
+
+            &_state_current {
+                background: #5A564E;
+                color: #D9D1BD
+            }
+
+            &:hover {
+                background: #5A564E;
+            }
+
+            & + & {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    &__page {
+        padding-top: 3px;
+        line-height: 45px;
+        color: #33312D;
+        font-size: 16px;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: url('/system/blocks/school/i/menu.svg') no-repeat top left;
+            background-size: 24px 24px;
+            display: inline-block;
+            position: relative;
+            top: 6px;
+            margin-right: 10px;
+            display: none;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 4px 0 4px;
+            border-color: #999999 transparent transparent transparent;
+            position: relative;
+            margin-left: 8px;
+            top: -2px;
+            // display: none;
+        }
+
+        &:hover {
+            &:after {
+                border-color: #777777 transparent transparent transparent;
+            }
+        }
+    }
+
+    &__prev, &__next {
+        width: 60px;
+        height: 48px;
+        background: url('') no-repeat center center;
+        opacity: 0.2;
+
+        &_state_active {
+            opacity: 0.6;
+            // background-color: rgba(0, 0, 0, 0.05);
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__prev {
+        background-image: url('/system/blocks/school/i/arrow-left.svg');
+        background-position: left center;
+    }
+
+    &__next {
+        background-image: url('/system/blocks/school/i/arrow-right.svg');
+        background-position: right center;
+    }
+
+    &__parts {
+    }
+
+    &__part {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        line-height: 44px;
+        padding: 4px 16px 0;
+        color: #777777;
+
+        &_state_active {
+            background: rgba(0, 0, 0, 0.04);
+            color: #333333;
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 620px;
+        margin: 48px auto 0;
+        padding-bottom: 120px;
+
+        &_state_dissolved {
+            opacity: 0.3;
+        }
+    }
+
+    &__nextlesson {
+        width: 220px;
+        margin: 60px auto 0;
+        background: #F3F1ED;
+        padding-top: 3px;
+        padding-right: 20px;
+        line-height: 45px;
+        color: #33312D;
+        font-size: 16px;
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+        box-sizing: border-box;
+
+        &arrow {
+            width: 60px;
+            height: 48px;
+            background: url('/system/blocks/school/i/arrow-right.svg') no-repeat right center;
+            opacity: 0.6;
+            position: absolute;
+            right: 20px;
+            top: 0;
+        }
+
+        &:hover &arrow {
+            opacity: 1;
+        }
+    }
+}
